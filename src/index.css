@@ -1,0 +1,109 @@
+/* Import Montserrat Font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Styles */
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  body {
+    @apply m-0 font-sans text-deep-brown bg-warm-cream antialiased;
+    font-size: 16px;
+    line-height: 1.6;
+    min-width: 320px;
+  }
+
+  /* Typography Defaults - Simplified to avoid conflicts */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+
+  a {
+    @apply text-soft-terracotta no-underline transition-colors duration-200;
+  }
+
+  a:hover {
+    @apply text-warm-charcoal;
+  }
+}
+
+/* Custom Component Styles */
+@layer components {
+  /* Button Variants */
+  .btn-primary {
+    @apply bg-soft-terracotta text-white px-6 py-3 rounded-button font-semibold
+           transition-all duration-200 hover:bg-opacity-90 hover:shadow-elevated
+           focus:outline-none focus:ring-2 focus:ring-soft-terracotta focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-soft-terracotta text-soft-terracotta px-6 py-3 rounded-button
+           font-semibold transition-all duration-200 hover:bg-soft-terracotta hover:text-white
+           focus:outline-none focus:ring-2 focus:ring-soft-terracotta focus:ring-offset-2;
+  }
+
+  .btn-ghost {
+    @apply text-soft-terracotta px-6 py-3 font-semibold transition-all duration-200
+           hover:underline focus:outline-none focus:ring-2 focus:ring-soft-terracotta focus:ring-offset-2;
+  }
+
+  .btn-large {
+    @apply h-button-lg px-6;
+  }
+
+  .btn-medium {
+    @apply h-button-md px-5;
+  }
+
+  .btn-small {
+    @apply h-button-sm px-4 text-small;
+  }
+
+  /* Input Styles */
+  .input-field {
+    @apply border border-gray-300 rounded-input px-4 py-2 w-full text-body
+           transition-all duration-200 focus:outline-none focus:border-soft-terracotta
+           focus:shadow-elevated;
+  }
+
+  .input-error {
+    @apply border-red-500 focus:border-red-500 focus:ring-red-500;
+  }
+
+  .input-success {
+    @apply border-sage-green focus:border-sage-green focus:ring-sage-green;
+  }
+
+  /* Card Styles */
+  .card {
+    @apply bg-white rounded-card shadow-elevated transition-all duration-300
+           hover:shadow-card-hover hover:-translate-y-1;
+  }
+
+  /* Badge Styles */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-tiny font-semibold;
+  }
+
+  .badge-sustainable {
+    @apply bg-sage-green text-white;
+  }
+
+  .badge-new {
+    @apply bg-soft-terracotta text-white;
+  }
+
+  .badge-bestseller {
+    @apply bg-warm-charcoal text-white;
+  }
+}

@@ -1,0 +1,895 @@
+import type { Product } from '../types/data';
+
+// Mock product data for Cozy Haven E-commerce
+// Using high-quality Unsplash images for bedding products
+
+export const products: Product[] = [
+  // ======================
+  // SHEETS
+  // ======================
+  {
+    id: 'sheet-001',
+    name: 'Egyptian Cotton Sateen Sheet Set',
+    slug: 'egyptian-cotton-sateen-sheet-set',
+    category: 'Sheets',
+    price: 189.99,
+    images: [
+      'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800',
+      'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800',
+      'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800',
+      'https://images.unsplash.com/photo-1629140727571-9b5c6f6267b4?w=800',
+    ],
+    description: 'Indulge in the ultimate sleeping experience with our 600-thread-count Egyptian cotton sateen sheet set. Woven from extra-long staple cotton, these sheets offer a luxurious silky-smooth feel and subtle sheen. The sateen weave creates a buttery soft surface that gets even softer with each wash, while maintaining exceptional durability.',
+    shortDescription: 'Luxurious 600-thread-count Egyptian cotton with silky sateen finish',
+    specifications: {
+      material: 'Egyptian Cotton',
+      threadCount: 600,
+      weaveType: 'Sateen',
+      careInstructions: [
+        'Machine wash cold with like colors',
+        'Tumble dry low',
+        'Remove promptly to reduce wrinkles',
+        'Do not bleach',
+        'Iron on low heat if needed',
+      ],
+      whatsIncluded: [
+        '1 Flat Sheet',
+        '1 Fitted Sheet (pocket depth: 16")',
+        '2 Pillowcases (King size includes 2 King pillowcases)',
+      ],
+    },
+    availableSizes: ['Twin', 'Twin XL', 'Full', 'Queen', 'King', 'California King'],
+    availableColors: ['White', 'Ivory', 'Sage', 'Stone Gray'],
+    rating: 4.8,
+    reviewCount: 342,
+    isBestseller: true,
+    isSustainable: true,
+    relatedProductIds: ['duvet-001', 'pillow-001', 'sheet-002'],
+    collectionId: 'cloud-cotton',
+  },
+  {
+    id: 'sheet-002',
+    name: 'Linen Relaxed Sheet Set',
+    slug: 'linen-relaxed-sheet-set',
+    category: 'Sheets',
+    price: 229.99,
+    images: [
+      'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800',
+      'https://images.unsplash.com/photo-1617364025481-dc6c7f08e4a0?w=800',
+      'https://images.unsplash.com/photo-1615800098779-1be32e60cca3?w=800',
+      'https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800',
+    ],
+    description: 'Experience the natural beauty of 100% European linen with our relaxed sheet set. Pre-washed for incredible softness, these sheets are naturally temperature-regulating, keeping you cool in summer and warm in winter. The lived-in texture and subtle natural wrinkles add effortless elegance to your bedroom.',
+    shortDescription: '100% European linen, pre-washed for ultimate softness and breathability',
+    specifications: {
+      material: 'Linen',
+      weaveType: 'Plain weave',
+      weight: 'Medium weight (165 GSM)',
+      careInstructions: [
+        'Machine wash cold or warm',
+        'Tumble dry low or line dry',
+        'Linen naturally softens with each wash',
+        'Iron while damp for a crisp look (optional)',
+        'Do not bleach',
+      ],
+      whatsIncluded: [
+        '1 Flat Sheet',
+        '1 Fitted Sheet (pocket depth: 17")',
+        '2 Pillowcases',
+      ],
+    },
+    availableSizes: ['Twin', 'Full', 'Queen', 'King', 'California King'],
+    availableColors: ['Ivory', 'Sage', 'Stone Gray', 'Terracotta'],
+    rating: 4.7,
+    reviewCount: 278,
+    isSustainable: true,
+    relatedProductIds: ['duvet-002', 'pillow-002', 'sheet-001'],
+    collectionId: 'linen-luxe',
+  },
+  {
+    id: 'sheet-003',
+    name: 'Organic Bamboo Cooling Sheet Set',
+    slug: 'organic-bamboo-cooling-sheet-set',
+    category: 'Sheets',
+    price: 149.99,
+    images: [
+      'https://images.unsplash.com/photo-1618220179428-22790b461013?w=800',
+      'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=800',
+      'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800',
+      'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800',
+    ],
+    description: 'Stay cool and comfortable all night with our eco-friendly bamboo sheet set. Made from 100% organic bamboo viscose, these sheets are incredibly soft, naturally moisture-wicking, and hypoallergenic. Perfect for hot sleepers and sensitive skin.',
+    shortDescription: 'Eco-friendly bamboo viscose with natural cooling and moisture-wicking',
+    specifications: {
+      material: 'Bamboo',
+      threadCount: 400,
+      weaveType: 'Twill',
+      careInstructions: [
+        'Machine wash cold on gentle cycle',
+        'Tumble dry low',
+        'Do not use fabric softener',
+        'Do not bleach',
+        'Remove promptly from dryer',
+      ],
+      whatsIncluded: [
+        '1 Flat Sheet',
+        '1 Fitted Sheet (pocket depth: 16")',
+        '2 Pillowcases',
+      ],
+    },
+    availableSizes: ['Twin', 'Full', 'Queen', 'King', 'California King'],
+    availableColors: ['White', 'Ivory', 'Sage', 'Charcoal'],
+    rating: 4.6,
+    reviewCount: 195,
+    isSustainable: true,
+    relatedProductIds: ['duvet-003', 'pillow-003', 'sheet-004'],
+  },
+  {
+    id: 'sheet-004',
+    name: 'Percale Crisp Sheet Set',
+    slug: 'percale-crisp-sheet-set',
+    category: 'Sheets',
+    price: 169.99,
+    images: [
+      'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800',
+      'https://images.unsplash.com/photo-1615529182904-14819c35db37?w=800',
+      'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800',
+      'https://images.unsplash.com/photo-1505693314120-0d443867891c?w=800',
+    ],
+    description: 'For those who love that hotel-crisp feel, our 300-thread-count percale sheet set delivers. Made from 100% long-staple cotton with a matte finish, these sheets are lightweight, breathable, and perfectly crisp without being stiff.',
+    shortDescription: 'Hotel-quality percale cotton with crisp, cool finish',
+    specifications: {
+      material: 'Egyptian Cotton',
+      threadCount: 300,
+      weaveType: 'Percale',
+      careInstructions: [
+        'Machine wash warm',
+        'Tumble dry medium',
+        'Iron for extra crispness (optional)',
+        'Do not bleach',
+        'Can be washed with similar colors',
+      ],
+      whatsIncluded: [
+        '1 Flat Sheet',
+        '1 Fitted Sheet (pocket depth: 16")',
+        '2 Pillowcases',
+      ],
+    },
+    availableSizes: ['Twin', 'Full', 'Queen', 'King', 'California King'],
+    availableColors: ['White', 'Ivory', 'Navy', 'Stone Gray'],
+    rating: 4.7,
+    reviewCount: 167,
+    relatedProductIds: ['duvet-001', 'pillow-004', 'sheet-001'],
+  },
+
+  // ======================
+  // DUVETS & COMFORTERS
+  // ======================
+  {
+    id: 'duvet-001',
+    name: 'All-Season Down Alternative Duvet',
+    slug: 'all-season-down-alternative-duvet',
+    category: 'Duvets',
+    price: 159.99,
+    images: [
+      'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800',
+      'https://images.unsplash.com/photo-1616627977641-dc52c2e5ff10?w=800',
+      'https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800',
+      'https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800',
+    ],
+    description: 'Experience the warmth and comfort of down without the allergens. Our hypoallergenic down-alternative duvet features premium microfiber fill with baffle-box construction to prevent shifting. Perfect for all seasons and suitable for sensitive sleepers.',
+    shortDescription: 'Hypoallergenic down-alternative with year-round comfort',
+    specifications: {
+      material: 'Microfiber',
+      fillPower: 700,
+      weight: 'All-Season (medium warmth)',
+      careInstructions: [
+        'Machine wash cold on gentle cycle',
+        'Tumble dry low with clean tennis balls',
+        'Fluff regularly to maintain loft',
+        'Spot clean stains when possible',
+        'Professional cleaning recommended annually',
+      ],
+      whatsIncluded: [
+        '1 Down Alternative Duvet Insert',
+        'Corner loops for duvet cover attachment',
+        'Storage bag included',
+      ],
+    },
+    availableSizes: ['Twin', 'Full', 'Queen', 'King', 'California King'],
+    availableColors: ['White'],
+    rating: 4.6,
+    reviewCount: 289,
+    isBestseller: true,
+    relatedProductIds: ['sheet-001', 'pillow-001', 'duvet-002'],
+    collectionId: 'cloud-cotton',
+  },
+  {
+    id: 'duvet-002',
+    name: 'Lightweight Linen Duvet Cover',
+    slug: 'lightweight-linen-duvet-cover',
+    category: 'Duvets',
+    price: 249.99,
+    images: [
+      'https://images.unsplash.com/photo-1582647509108-95bc88ad7f25?w=800',
+      'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800',
+      'https://images.unsplash.com/photo-1616627977641-dc52c2e5ff10?w=800',
+      'https://images.unsplash.com/photo-1574813473252-fe3fd8b06e1a?w=800',
+    ],
+    description: 'Elevate your bedroom with our 100% French linen duvet cover. Stone-washed for incredible softness from day one, this breathable cover gets better with every wash. Features hidden button closure and interior corner ties.',
+    shortDescription: '100% French linen, stone-washed for lived-in softness',
+    specifications: {
+      material: 'Linen',
+      weaveType: 'Plain weave',
+      weight: 'Lightweight (160 GSM)',
+      careInstructions: [
+        'Machine wash cold or warm',
+        'Tumble dry low',
+        'Embrace natural wrinkles or iron while damp',
+        'Do not bleach',
+        'Naturally antimicrobial',
+      ],
+      whatsIncluded: [
+        '1 Linen Duvet Cover',
+        'Hidden button closure',
+        'Interior corner ties',
+      ],
+    },
+    availableSizes: ['Twin', 'Full', 'Queen', 'King', 'California King'],
+    availableColors: ['Ivory', 'Sage', 'Stone Gray', 'Terracotta', 'White'],
+    rating: 4.8,
+    reviewCount: 203,
+    isSustainable: true,
+    relatedProductIds: ['sheet-002', 'pillow-002', 'duvet-001'],
+    collectionId: 'linen-luxe',
+  },
+  {
+    id: 'duvet-003',
+    name: 'Luxury Goose Down Comforter',
+    slug: 'luxury-goose-down-comforter',
+    category: 'Duvets',
+    price: 389.99,
+    originalPrice: 459.99,
+    images: [
+      'https://images.unsplash.com/photo-1615878792088-44d3cd5e8d88?w=800',
+      'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800',
+      'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800',
+      'https://images.unsplash.com/photo-1617325247661-675ab4b64ae2?w=800',
+    ],
+    description: 'Ultimate luxury awaits with our premium 800-fill-power Siberian goose down comforter. Encased in 100% Egyptian cotton shell with baffle-box construction for even distribution. Responsibly sourced and OEKO-TEX certified.',
+    shortDescription: 'Premium 800-fill goose down with Egyptian cotton shell',
+    specifications: {
+      material: 'Egyptian Cotton',
+      fillPower: 800,
+      weight: 'Ultra-warmth',
+      careInstructions: [
+        'Dry clean recommended',
+        'Air out regularly',
+        'Shake and fluff daily',
+        'Use duvet cover to protect',
+        'Professional cleaning once a year',
+      ],
+      whatsIncluded: [
+        '1 Goose Down Comforter',
+        'OEKO-TEX certification',
+        'Luxury storage bag',
+        '10-year warranty',
+      ],
+    },
+    availableSizes: ['Queen', 'King', 'California King'],
+    availableColors: ['White'],
+    rating: 4.9,
+    reviewCount: 156,
+    isSustainable: true,
+    relatedProductIds: ['sheet-001', 'pillow-001', 'duvet-002'],
+  },
+
+  // ======================
+  // PILLOWS
+  // ======================
+  {
+    id: 'pillow-001',
+    name: 'Memory Foam Contour Pillow',
+    slug: 'memory-foam-contour-pillow',
+    category: 'Pillows',
+    price: 89.99,
+    images: [
+      'https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=800',
+      'https://images.unsplash.com/photo-1631049552240-59c37f38802b?w=800',
+      'https://images.unsplash.com/photo-1620626861733-4781b4a34de8?w=800',
+      'https://images.unsplash.com/photo-1601006973923-c8c598e9c6e7?w=800',
+    ],
+    description: 'Achieve perfect neck and spine alignment with our ergonomically designed memory foam pillow. The contoured shape provides targeted support for back and side sleepers, while the cooling gel infusion regulates temperature all night.',
+    shortDescription: 'Ergonomic memory foam with cooling gel technology',
+    specifications: {
+      material: 'Bamboo',
+      fillPower: undefined,
+      weight: 'Medium-firm support',
+      dimensions: 'Standard: 24" x 16" x 5", Queen: 28" x 16" x 5", King: 32" x 16" x 5"',
+      careInstructions: [
+        'Remove and machine wash cover only',
+        'Spot clean memory foam with damp cloth',
+        'Do not machine wash foam insert',
+        'Air out regularly',
+        'Replace every 2-3 years',
+      ],
+      whatsIncluded: [
+        '1 Memory Foam Pillow',
+        'Removable bamboo cover',
+        '5-year warranty',
+      ],
+    },
+    availableSizes: ['Queen', 'King'],
+    availableColors: ['White'],
+    rating: 4.7,
+    reviewCount: 412,
+    isBestseller: true,
+    relatedProductIds: ['sheet-001', 'duvet-001', 'pillow-002'],
+    collectionId: 'cloud-cotton',
+  },
+  {
+    id: 'pillow-002',
+    name: 'Down Alternative Soft Pillow',
+    slug: 'down-alternative-soft-pillow',
+    category: 'Pillows',
+    price: 59.99,
+    images: [
+      'https://images.unsplash.com/photo-1616627977641-dc52c2e5ff10?w=800',
+      'https://images.unsplash.com/photo-1582587364990-89ecbbec50a2?w=800',
+      'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=800',
+      'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?w=800',
+    ],
+    description: 'Sink into cloud-like comfort with our plush down-alternative pillow. Hypoallergenic microfiber fill mimics the softness of down, perfect for stomach and back sleepers who prefer a softer pillow. Machine washable for easy care.',
+    shortDescription: 'Plush hypoallergenic down-alternative, machine washable',
+    specifications: {
+      material: 'Microfiber',
+      fillPower: 650,
+      weight: 'Soft',
+      dimensions: 'Standard: 20" x 26", Queen: 20" x 30", King: 20" x 36"',
+      careInstructions: [
+        'Machine wash warm',
+        'Tumble dry low with clean tennis balls',
+        'Fluff daily to maintain shape',
+        'Wash every 3-6 months',
+        'Replace annually for best support',
+      ],
+      whatsIncluded: [
+        '1 Down Alternative Pillow',
+        '100% cotton cover',
+      ],
+    },
+    availableSizes: ['Queen', 'King'],
+    availableColors: ['White'],
+    rating: 4.5,
+    reviewCount: 328,
+    relatedProductIds: ['sheet-002', 'duvet-001', 'pillow-001'],
+  },
+  {
+    id: 'pillow-003',
+    name: 'Adjustable Shredded Memory Foam Pillow',
+    slug: 'adjustable-shredded-memory-foam-pillow',
+    category: 'Pillows',
+    price: 79.99,
+    images: [
+      'https://images.unsplash.com/photo-1601006973923-c8c598e9c6e7?w=800',
+      'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800',
+      'https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800',
+      'https://images.unsplash.com/photo-1631049035403-c49e48b8c609?w=800',
+    ],
+    description: 'Customize your comfort with our unique adjustable pillow. Remove or add shredded memory foam fill to achieve your perfect loft height and firmness level. Ideal for all sleeping positions with breathable bamboo cover.',
+    shortDescription: 'Customizable loft with shredded memory foam fill',
+    specifications: {
+      material: 'Bamboo',
+      weight: 'Adjustable (soft to firm)',
+      dimensions: 'Standard: 20" x 26", Queen: 20" x 30", King: 20" x 36"',
+      careInstructions: [
+        'Remove foam fill before washing',
+        'Machine wash cover in cold water',
+        'Air dry cover or tumble dry low',
+        'Fluff foam regularly',
+        'Foam fill not washable',
+      ],
+      whatsIncluded: [
+        '1 Adjustable Pillow',
+        'Removable bamboo cover',
+        'Extra fill bag',
+        '3-year warranty',
+      ],
+    },
+    availableSizes: ['Queen', 'King'],
+    availableColors: ['White'],
+    rating: 4.6,
+    reviewCount: 267,
+    relatedProductIds: ['sheet-003', 'duvet-001', 'pillow-004'],
+  },
+  {
+    id: 'pillow-004',
+    name: 'European Square Decorative Pillow',
+    slug: 'european-square-decorative-pillow',
+    category: 'Pillows',
+    price: 49.99,
+    images: [
+      'https://images.unsplash.com/photo-1616627977641-dc52c2e5ff10?w=800',
+      'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800',
+      'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800',
+      'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?w=800',
+    ],
+    description: 'Complete your bed styling with our European square pillow. Features a luxurious linen cover in multiple colors to coordinate with your bedding. Filled with hypoallergenic down-alternative for plush support.',
+    shortDescription: 'European square styling pillow with linen cover',
+    specifications: {
+      material: 'Linen',
+      dimensions: '26" x 26" square',
+      careInstructions: [
+        'Spot clean or dry clean cover',
+        'Fluff regularly',
+        'Use pillow protector',
+        'Avoid direct sunlight',
+      ],
+      whatsIncluded: [
+        '1 European Square Pillow',
+        'Linen cover with hidden zipper',
+      ],
+    },
+    availableSizes: ['Queen'],
+    availableColors: ['Ivory', 'Sage', 'Stone Gray', 'Terracotta', 'White'],
+    rating: 4.7,
+    reviewCount: 145,
+    relatedProductIds: ['sheet-002', 'duvet-002', 'blanket-002'],
+    collectionId: 'linen-luxe',
+  },
+
+  // ======================
+  // MATTRESS TOPPERS
+  // ======================
+  {
+    id: 'topper-001',
+    name: 'Gel-Infused Memory Foam Topper',
+    slug: 'gel-infused-memory-foam-topper',
+    category: 'Toppers',
+    price: 199.99,
+    images: [
+      'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800',
+      'https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800',
+      'https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?w=800',
+      'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800',
+    ],
+    description: 'Transform your mattress with our 3-inch gel-infused memory foam topper. Provides pressure-relieving comfort while the cooling gel regulates temperature. Perfect for adding plush comfort to a firm mattress.',
+    shortDescription: '3-inch memory foam with cooling gel infusion',
+    specifications: {
+      material: 'Bamboo',
+      dimensions: 'Twin: 38" x 75" x 3", Full: 54" x 75" x 3", Queen: 60" x 80" x 3", King: 76" x 80" x 3", Cal King: 72" x 84" x 3"',
+      weight: '3-inch thickness, medium-soft feel',
+      careInstructions: [
+        'Spot clean only',
+        'Do not machine wash',
+        'Remove bamboo cover and machine wash separately',
+        'Air out regularly',
+        'Rotate every 3 months',
+      ],
+      whatsIncluded: [
+        '1 Memory Foam Topper',
+        'Removable bamboo cover',
+        '10-year warranty',
+      ],
+    },
+    availableSizes: ['Twin', 'Full', 'Queen', 'King', 'California King'],
+    availableColors: ['White'],
+    rating: 4.6,
+    reviewCount: 234,
+    isBestseller: true,
+    relatedProductIds: ['sheet-001', 'duvet-001', 'topper-002'],
+  },
+  {
+    id: 'topper-002',
+    name: 'Down Alternative Mattress Pad',
+    slug: 'down-alternative-mattress-pad',
+    category: 'Toppers',
+    price: 129.99,
+    images: [
+      'https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800',
+      'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800',
+      'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800',
+      'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800',
+    ],
+    description: 'Add an extra layer of plush comfort with our quilted mattress pad. Filled with hypoallergenic down-alternative and featuring deep pockets that fit mattresses up to 18 inches thick.',
+    shortDescription: 'Quilted down-alternative pad with deep pocket fit',
+    specifications: {
+      material: 'Cotton Blend',
+      weight: 'Medium cushioning',
+      careInstructions: [
+        'Machine wash cold',
+        'Tumble dry low',
+        'Do not bleach',
+        'Do not iron',
+        'Wash before first use',
+      ],
+      whatsIncluded: [
+        '1 Quilted Mattress Pad',
+        'Stretch-to-fit skirt (fits up to 18" deep)',
+      ],
+    },
+    availableSizes: ['Twin', 'Full', 'Queen', 'King', 'California King'],
+    availableColors: ['White'],
+    rating: 4.5,
+    reviewCount: 189,
+    relatedProductIds: ['sheet-004', 'duvet-001', 'topper-001'],
+  },
+
+  // ======================
+  // BLANKETS & THROWS
+  // ======================
+  {
+    id: 'blanket-001',
+    name: 'Chunky Knit Throw Blanket',
+    slug: 'chunky-knit-throw-blanket',
+    category: 'Blankets',
+    price: 89.99,
+    images: [
+      'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=800',
+      'https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=800',
+      'https://images.unsplash.com/photo-1616627977641-dc52c2e5ff10?w=800',
+      'https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=800',
+    ],
+    description: 'Add texture and warmth to your space with our hand-knitted chunky throw blanket. Made from soft, premium acrylic yarn, this oversized throw is perfect for snuggling on the couch or layering on your bed.',
+    shortDescription: 'Hand-knitted chunky throw with premium soft yarn',
+    specifications: {
+      material: 'Cotton Blend',
+      dimensions: '50" x 60"',
+      weight: 'Heavy weight',
+      careInstructions: [
+        'Hand wash cold recommended',
+        'Lay flat to dry',
+        'Do not wring or twist',
+        'Do not bleach',
+        'Store folded to maintain shape',
+      ],
+      whatsIncluded: [
+        '1 Chunky Knit Throw',
+      ],
+    },
+    availableSizes: ['Queen'],
+    availableColors: ['Ivory', 'Sage', 'Stone Gray', 'Charcoal'],
+    rating: 4.8,
+    reviewCount: 456,
+    isBestseller: true,
+    relatedProductIds: ['blanket-002', 'sheet-002', 'pillow-004'],
+    collectionId: 'seasonal',
+  },
+  {
+    id: 'blanket-002',
+    name: 'Lightweight Linen Throw',
+    slug: 'lightweight-linen-throw',
+    category: 'Blankets',
+    price: 79.99,
+    images: [
+      'https://images.unsplash.com/photo-1584253686747-5421024cee51?w=800',
+      'https://images.unsplash.com/photo-1592078614830-7bbb87e9d00a?w=800',
+      'https://images.unsplash.com/photo-1574813473252-fe3fd8b06e1a?w=800',
+      'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800',
+    ],
+    description: 'Versatile and breathable, our stonewashed linen throw is perfect for year-round use. Drape over your bed or sofa for effortless elegance. Gets softer with every wash.',
+    shortDescription: 'Breathable stonewashed linen for year-round comfort',
+    specifications: {
+      material: 'Linen',
+      dimensions: '50" x 70"',
+      weight: 'Lightweight',
+      careInstructions: [
+        'Machine wash cold',
+        'Tumble dry low or line dry',
+        'Embrace natural texture',
+        'Iron if desired for smooth look',
+        'Do not bleach',
+      ],
+      whatsIncluded: [
+        '1 Linen Throw Blanket',
+      ],
+    },
+    availableSizes: ['Queen'],
+    availableColors: ['Ivory', 'Sage', 'Terracotta', 'Stone Gray'],
+    rating: 4.7,
+    reviewCount: 312,
+    isSustainable: true,
+    relatedProductIds: ['sheet-002', 'duvet-002', 'blanket-001'],
+    collectionId: 'linen-luxe',
+  },
+  {
+    id: 'blanket-003',
+    name: 'Weighted Blanket',
+    slug: 'weighted-blanket',
+    category: 'Blankets',
+    price: 149.99,
+    images: [
+      'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800',
+      'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800',
+      'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800',
+      'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800',
+    ],
+    description: 'Experience deeper, more restful sleep with our premium weighted blanket. Evenly distributed glass beads provide gentle pressure for a calming effect. Available in multiple weights to suit your body.',
+    shortDescription: 'Deep pressure therapy blanket with glass beads',
+    specifications: {
+      material: 'Cotton Blend',
+      weight: 'Available in 15 lb, 20 lb, 25 lb',
+      dimensions: '48" x 72" (single size), 60" x 80" (queen size)',
+      careInstructions: [
+        'Spot clean or machine wash on gentle',
+        'Air dry or tumble dry low',
+        'Use duvet cover for easier maintenance',
+        'Do not dry clean',
+        'Avoid bleach',
+      ],
+      whatsIncluded: [
+        '1 Weighted Blanket',
+        'Glass bead filling',
+        'Seven-layer design',
+      ],
+    },
+    availableSizes: ['Queen', 'King'],
+    availableColors: ['Charcoal', 'Navy', 'Stone Gray'],
+    rating: 4.7,
+    reviewCount: 389,
+    relatedProductIds: ['sheet-003', 'pillow-001', 'duvet-001'],
+  },
+
+  // ======================
+  // CURTAINS
+  // ======================
+  {
+    id: 'curtain-001',
+    name: 'Blackout Linen Curtains',
+    slug: 'blackout-linen-curtains',
+    category: 'Curtains',
+    price: 139.99,
+    images: [
+      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800',
+      'https://images.unsplash.com/photo-1604522062385-2c732d5ca5e1?w=800',
+      'https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=800',
+      'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800',
+    ],
+    description: 'Achieve the perfect sleep environment with our 100% blackout linen curtains. Triple-weave technology blocks 100% of light while maintaining the natural texture of linen. Energy-efficient and machine washable.',
+    shortDescription: '100% blackout with natural linen texture',
+    specifications: {
+      material: 'Linen',
+      dimensions: 'Multiple sizes: 52" W x 84", 96", or 108" L (sold individually)',
+      careInstructions: [
+        'Machine wash cold',
+        'Tumble dry low',
+        'Steam to remove wrinkles',
+        'Do not bleach',
+        'Iron on low if needed',
+      ],
+      whatsIncluded: [
+        '1 Curtain Panel (sold individually)',
+        'Rod pocket and back tab header',
+        'Triple-weave blackout lining',
+      ],
+    },
+    availableSizes: ['Queen'],
+    availableColors: ['Ivory', 'Sage', 'Stone Gray', 'Charcoal'],
+    rating: 4.6,
+    reviewCount: 178,
+    relatedProductIds: ['sheet-002', 'duvet-002', 'curtain-002'],
+    collectionId: 'linen-luxe',
+  },
+  {
+    id: 'curtain-002',
+    name: 'Sheer Voile Curtain Panels',
+    slug: 'sheer-voile-curtain-panels',
+    category: 'Curtains',
+    price: 49.99,
+    images: [
+      'https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=800',
+      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800',
+      'https://images.unsplash.com/photo-1604522062385-2c732d5ca5e1?w=800',
+      'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800',
+    ],
+    description: 'Add ethereal elegance to your windows with our lightweight voile curtains. Semi-sheer fabric gently filters light while maintaining privacy. Perfect for layering with blackout curtains.',
+    shortDescription: 'Lightweight semi-sheer panels for soft filtered light',
+    specifications: {
+      material: 'Cotton Blend',
+      dimensions: 'Multiple sizes: 52" W x 84", 96", or 108" L (sold individually)',
+      careInstructions: [
+        'Machine wash cold on gentle',
+        'Tumble dry low',
+        'Remove promptly to minimize wrinkles',
+        'Iron on low if needed',
+        'Do not bleach',
+      ],
+      whatsIncluded: [
+        '1 Sheer Curtain Panel (sold individually)',
+        'Rod pocket header',
+      ],
+    },
+    availableSizes: ['Queen'],
+    availableColors: ['White', 'Ivory', 'Blush'],
+    rating: 4.4,
+    reviewCount: 134,
+    relatedProductIds: ['curtain-001', 'sheet-001', 'duvet-002'],
+  },
+
+  // ======================
+  // ADDITIONAL PRODUCTS
+  // ======================
+  {
+    id: 'pillow-005',
+    name: 'Silk Pillowcase Set',
+    slug: 'silk-pillowcase-set',
+    category: 'Pillows',
+    price: 69.99,
+    images: [
+      'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?w=800',
+      'https://images.unsplash.com/photo-1582587364990-89ecbbec50a2?w=800',
+      'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800',
+      'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800',
+    ],
+    description: 'Pamper your skin and hair with our 100% pure mulberry silk pillowcases. Naturally hypoallergenic and temperature-regulating, silk reduces friction to prevent hair breakage and facial wrinkles.',
+    shortDescription: '100% mulberry silk for hair and skin benefits',
+    specifications: {
+      material: 'Silk',
+      threadCount: 600,
+      dimensions: 'Standard: 20" x 26", Queen: 20" x 30", King: 20" x 36"',
+      careInstructions: [
+        'Hand wash in cold water with gentle detergent',
+        'Or machine wash on delicate in mesh bag',
+        'Air dry flat',
+        'Iron on lowest setting if needed',
+        'Do not bleach or wring',
+      ],
+      whatsIncluded: [
+        '2 Silk Pillowcases',
+        'Envelope closure',
+      ],
+    },
+    availableSizes: ['Queen', 'King'],
+    availableColors: ['White', 'Ivory', 'Blush', 'Charcoal'],
+    rating: 4.8,
+    reviewCount: 523,
+    isBestseller: true,
+    isNew: true,
+    relatedProductIds: ['sheet-001', 'pillow-001', 'sheet-004'],
+  },
+  {
+    id: 'sheet-005',
+    name: 'Jersey Knit Sheet Set',
+    slug: 'jersey-knit-sheet-set',
+    category: 'Sheets',
+    price: 99.99,
+    images: [
+      'https://images.unsplash.com/photo-1631049035403-c49e48b8c609?w=800',
+      'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800',
+      'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800',
+      'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800',
+    ],
+    description: 'Cozy up in the t-shirt soft comfort of our jersey knit sheets. Made from 100% cotton with a heather finish, these stretchy sheets fit snugly on your mattress and get even softer with every wash.',
+    shortDescription: 'T-shirt soft jersey knit with stretch fit',
+    specifications: {
+      material: 'Cotton Blend',
+      weaveType: 'Jersey knit',
+      weight: 'Medium weight (150 GSM)',
+      careInstructions: [
+        'Machine wash warm',
+        'Tumble dry low',
+        'Do not bleach',
+        'No ironing needed',
+        'Will not pill or fade',
+      ],
+      whatsIncluded: [
+        '1 Fitted Sheet (deep pocket: 18")',
+        '1 Flat Sheet',
+        '2 Pillowcases',
+      ],
+    },
+    availableSizes: ['Twin', 'Full', 'Queen', 'King', 'California King'],
+    availableColors: ['Charcoal', 'Navy', 'Sage', 'Stone Gray'],
+    rating: 4.6,
+    reviewCount: 289,
+    relatedProductIds: ['blanket-001', 'pillow-002', 'sheet-001'],
+    collectionId: 'cloud-cotton',
+  },
+  {
+    id: 'duvet-004',
+    name: 'Waffle Weave Duvet Cover',
+    slug: 'waffle-weave-duvet-cover',
+    category: 'Duvets',
+    price: 179.99,
+    images: [
+      'https://images.unsplash.com/photo-1616627977641-dc52c2e5ff10?w=800',
+      'https://images.unsplash.com/photo-1574813473252-fe3fd8b06e1a?w=800',
+      'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800',
+      'https://images.unsplash.com/photo-1582647509108-95bc88ad7f25?w=800',
+    ],
+    description: 'Add dimensional texture to your bedroom with our cotton waffle weave duvet cover. The raised texture is soft yet breathable, perfect for layering year-round. Features hidden button closure.',
+    shortDescription: 'Textured waffle weave cotton with modern appeal',
+    specifications: {
+      material: 'Egyptian Cotton',
+      weaveType: 'Waffle weave',
+      careInstructions: [
+        'Machine wash cold',
+        'Tumble dry low',
+        'Remove promptly',
+        'Do not bleach',
+        'Iron if needed',
+      ],
+      whatsIncluded: [
+        '1 Waffle Weave Duvet Cover',
+        'Hidden button closure',
+        'Interior corner ties',
+      ],
+    },
+    availableSizes: ['Twin', 'Full', 'Queen', 'King', 'California King'],
+    availableColors: ['White', 'Ivory', 'Stone Gray', 'Charcoal'],
+    rating: 4.7,
+    reviewCount: 198,
+    isNew: true,
+    relatedProductIds: ['sheet-004', 'pillow-004', 'duvet-002'],
+  },
+  {
+    id: 'blanket-004',
+    name: 'Cotton Cable Knit Blanket',
+    slug: 'cotton-cable-knit-blanket',
+    category: 'Blankets',
+    price: 119.99,
+    images: [
+      'https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=800',
+      'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=800',
+      'https://images.unsplash.com/photo-1574813473252-fe3fd8b06e1a?w=800',
+      'https://images.unsplash.com/photo-1616627977641-dc52c2e5ff10?w=800',
+    ],
+    description: 'Classic cable knit meets modern comfort in this 100% cotton blanket. Machine washable and durable, it adds cozy texture to any space. Perfect for layering or solo use in moderate temperatures.',
+    shortDescription: '100% cotton cable knit, machine washable',
+    specifications: {
+      material: 'Egyptian Cotton',
+      dimensions: '60" x 80"',
+      weight: 'Medium weight',
+      careInstructions: [
+        'Machine wash cold',
+        'Tumble dry low',
+        'Do not bleach',
+        'Reshape while damp',
+        'Store folded',
+      ],
+      whatsIncluded: [
+        '1 Cable Knit Blanket',
+      ],
+    },
+    availableSizes: ['Queen'],
+    availableColors: ['White', 'Ivory', 'Sage', 'Charcoal'],
+    rating: 4.8,
+    reviewCount: 267,
+    relatedProductIds: ['blanket-001', 'duvet-004', 'sheet-001'],
+    collectionId: 'seasonal',
+  },
+];
+
+// Helper functions for filtering products
+export const getProductById = (id: string): Product | undefined => {
+  return products.find((product) => product.id === id);
+};
+
+export const getProductsByCategory = (category: string): Product[] => {
+  return products.filter((product) => product.category === category);
+};
+
+export const getProductsByCollection = (collectionId: string): Product[] => {
+  return products.filter((product) => product.collectionId === collectionId);
+};
+
+export const getBestsellers = (): Product[] => {
+  return products.filter((product) => product.isBestseller);
+};
+
+export const getNewProducts = (): Product[] => {
+  return products.filter((product) => product.isNew);
+};
+
+export const getSustainableProducts = (): Product[] => {
+  return products.filter((product) => product.isSustainable);
+};
+
+export const getRelatedProducts = (productId: string): Product[] => {
+  const product = getProductById(productId);
+  if (!product) return [];
+
+  return product.relatedProductIds
+    .map((id) => getProductById(id))
+    .filter((p): p is Product => p !== undefined);
+};
