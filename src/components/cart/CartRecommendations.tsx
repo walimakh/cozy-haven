@@ -10,9 +10,10 @@ interface CartRecommendationsProps {
 export const CartRecommendations: FC<CartRecommendationsProps> = ({ onQuickAdd }) => {
   const [addedItems, setAddedItems] = useState<Set<string>>(new Set());
 
-  // Get cross-sell products (accessories and related items)
+  // Get "Complete the Set" products (substantial bedding items for upsell)
+  // Static product IDs for UX demonstration - duvet, pillows, blanket, topper
   const recommendations = products
-    .filter((p) => ['prod-010', 'prod-013', 'prod-017', 'prod-021'].includes(p.id))
+    .filter((p) => ['duvet-001', 'pillow-002', 'blanket-001', 'topper-001'].includes(p.id))
     .slice(0, 4);
 
   const handleQuickAdd = (product: Product) => {
@@ -118,7 +119,7 @@ export const CartRecommendations: FC<CartRecommendationsProps> = ({ onQuickAdd }
         <div className="mt-12 bg-cream/50 rounded-xl p-6">
           <div className="grid grid-cols-3 gap-8 text-center">
             <div>
-              <p className="text-3xl font-bold text-terracotta mb-2">100 Nights</p>
+              <p className="text-3xl font-bold text-terracotta mb-2">14 Days</p>
               <p className="text-sm text-charcoal/70">Risk-Free Trial</p>
             </div>
             <div>
@@ -126,7 +127,7 @@ export const CartRecommendations: FC<CartRecommendationsProps> = ({ onQuickAdd }
               <p className="text-sm text-charcoal/70">Orders Over $100</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-charcoal mb-2">100 Days</p>
+              <p className="text-3xl font-bold text-charcoal mb-2">14 Days</p>
               <p className="text-sm text-charcoal/70">Easy Returns</p>
             </div>
           </div>

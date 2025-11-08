@@ -41,6 +41,8 @@ export {
   Instagram,
   Twitter,
   Mail,
+  Phone,
+  MessageCircle,
 
   // Product Features
   Leaf as Sustainable,

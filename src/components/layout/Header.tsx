@@ -19,9 +19,48 @@ const Header: React.FC<HeaderProps> = ({ cartItemCount = 0, onSearchClick }) => 
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-warm-cream shadow-sm">
-      <div className="max-w-[1200px] mx-auto px-8">
-        <div className="flex items-center justify-between h-20">
+    <header className="sticky top-0 z-50 bg-white shadow-sm">
+      {/* Top Bar - Contact Info & Social Icons */}
+      <div className="bg-charcoal text-white">
+        <div className="max-w-[1200px] mx-auto px-8">
+          <div className="flex items-center justify-between h-10 text-sm">
+            {/* Left: Contact Info */}
+            <div className="flex items-center space-x-6">
+              <a href="tel:+1234567890" className="flex items-center space-x-2 hover:text-terracotta transition-colors">
+                <Icons.Phone size={14} />
+                <span>+1 (234) 567-890</span>
+              </a>
+              <a href="mailto:hello@cozyhaven.com" className="flex items-center space-x-2 hover:text-terracotta transition-colors">
+                <Icons.Mail size={14} />
+                <span>hello@cozyhaven.com</span>
+              </a>
+            </div>
+
+            {/* Right: Social Icons */}
+            <div className="flex items-center space-x-4">
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="hover:text-terracotta transition-colors" aria-label="X (Twitter)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-terracotta transition-colors" aria-label="Facebook">
+                <Icons.Facebook size={16} />
+              </a>
+              <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="hover:text-terracotta transition-colors" aria-label="WhatsApp">
+                <Icons.MessageCircle size={16} />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-terracotta transition-colors" aria-label="Instagram">
+                <Icons.Instagram size={16} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Header */}
+      <div className="bg-white border-b border-warm-cream">
+        <div className="max-w-[1200px] mx-auto px-8">
+          <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link
             to="/"
@@ -117,6 +156,7 @@ const Header: React.FC<HeaderProps> = ({ cartItemCount = 0, onSearchClick }) => 
             </Link>
           </div>
         </div>
+      </div>
       </div>
     </header>
   );

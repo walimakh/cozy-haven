@@ -211,9 +211,9 @@ export const products: Product[] = [
     category: 'Duvets',
     price: 249.99,
     images: [
-      'https://images.unsplash.com/photo-1582647509108-95bc88ad7f25?w=800',
       'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800',
-      'https://images.unsplash.com/photo-1616627977641-dc52c2e5ff10?w=800',
+      'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800',
+      'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800',
       'https://images.unsplash.com/photo-1574813473252-fe3fd8b06e1a?w=800',
     ],
     description: 'Elevate your bedroom with our 100% French linen duvet cover. Stone-washed for incredible softness from day one, this breathable cover gets better with every wash. Features hidden button closure and interior corner ties.',
@@ -294,7 +294,7 @@ export const products: Product[] = [
     category: 'Pillows',
     price: 89.99,
     images: [
-      'https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=800',
+      'https://images.unsplash.com/photo-1631049552240-59c37f38802b?w=800',
       'https://images.unsplash.com/photo-1631049552240-59c37f38802b?w=800',
       'https://images.unsplash.com/photo-1620626861733-4781b4a34de8?w=800',
       'https://images.unsplash.com/photo-1601006973923-c8c598e9c6e7?w=800',
@@ -334,10 +334,10 @@ export const products: Product[] = [
     category: 'Pillows',
     price: 59.99,
     images: [
-      'https://images.unsplash.com/photo-1616627977641-dc52c2e5ff10?w=800',
+      'https://images.unsplash.com/photo-1631049552240-59c37f38802b?w=800',
       'https://images.unsplash.com/photo-1582587364990-89ecbbec50a2?w=800',
-      'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=800',
-      'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?w=800',
+      'https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800',
+      'https://images.unsplash.com/photo-1620626861733-4781b4a34de8?w=800',
     ],
     description: 'Sink into cloud-like comfort with our plush down-alternative pillow. Hypoallergenic microfiber fill mimics the softness of down, perfect for stomach and back sleepers who prefer a softer pillow. Machine washable for easy care.',
     shortDescription: 'Plush hypoallergenic down-alternative, machine washable',
@@ -754,7 +754,7 @@ export const products: Product[] = [
     category: 'Sheets',
     price: 99.99,
     images: [
-      'https://images.unsplash.com/photo-1631049035403-c49e48b8c609?w=800',
+      'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800',
       'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800',
       'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800',
       'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800',

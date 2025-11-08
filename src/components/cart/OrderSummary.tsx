@@ -131,11 +131,11 @@ export const OrderSummary: FC<OrderSummaryProps> = ({ subtotal, itemCount }) => 
         </div>
         <div className="flex items-center gap-3 text-sm text-charcoal/70">
           <ShieldCheck className="w-5 h-5 text-sage" />
-          <span>100-Night Sleep Trial</span>
+          <span>14-Day Sleep Trial</span>
         </div>
         <div className="flex items-center gap-3 text-sm text-charcoal/70">
           <Package className="w-5 h-5 text-sage" />
-          <span>Easy Returns within 100 days</span>
+          <span>Easy Returns within 14 days</span>
         </div>
         <div className="flex items-center gap-3 text-sm text-charcoal/70">
           <Lock className="w-5 h-5 text-sage" />
