@@ -178,25 +178,35 @@ Set up icon library and create icon component wrapper.
 ### TASK-008: Header/Navigation Component
 **Priority:** High
 **Story Points:** 5
+**Status:** ✅ COMPLETED + ENHANCED
 
 **Description:**
 Create main navigation header with logo, menu, search, and cart.
 
 **Subtasks:**
-- [ ] TASK-008-A: Create Header component structure
-- [ ] TASK-008-B: Add logo placeholder (left side)
-- [ ] TASK-008-C: Create navigation menu (Shop, Collections, Materials, About, Contact)
-- [ ] TASK-008-D: Add search icon/bar
-- [ ] TASK-008-E: Add user account icon
-- [ ] TASK-008-F: Add cart icon with item count badge
-- [ ] TASK-008-G: Style with proper spacing and alignment
-- [ ] TASK-008-H: Add hover states for menu items
-- [ ] TASK-008-I: Make header sticky on scroll (optional)
+- [x] TASK-008-A: Create Header component structure
+- [x] TASK-008-B: Add logo placeholder (left side)
+- [x] TASK-008-C: Create navigation menu (Shop, Collections, Materials, About, Contact)
+- [x] TASK-008-D: Add search icon/bar
+- [x] TASK-008-E: Add user account icon
+- [x] TASK-008-F: Add cart icon with item count badge
+- [x] TASK-008-G: Style with proper spacing and alignment
+- [x] TASK-008-H: Add hover states for menu items
+- [x] TASK-008-I: Make header sticky on scroll (optional)
+- [x] **TASK-008-J: Add top contact bar with phone/email and social icons** (Enhancement - Nov 8, 2025)
 
 **Acceptance Criteria:**
-- Header is responsive to desktop widths
-- All navigation items are clickable
-- Cart badge shows item count correctly
+- ✅ Header is responsive to desktop widths
+- ✅ All navigation items are clickable
+- ✅ Cart badge shows item count correctly
+- ✅ Top contact bar displays phone, email, and social media links
+- ✅ X (Twitter) logo integrated with modern branding
+
+**Enhancement Notes (Nov 8, 2025):**
+- Added top contact bar above main navigation with black background
+- Contact info: Phone (+1 234-567-890), Email (hello@cozyhaven.com)
+- Social icons: X (formerly Twitter), Facebook, WhatsApp, Instagram
+- Replaced Twitter icon with official X logo (SVG)
 
 ---
 
@@ -253,23 +263,32 @@ Create main layout wrapper that includes header and footer.
 ### TASK-011: Create Mock Data Files
 **Priority:** High
 **Story Points:** 3
+**Status:** ✅ COMPLETED + MAINTAINED
 
 **Description:**
 Create comprehensive mock data for products, collections, and categories.
 
 **Subtasks:**
-- [ ] TASK-011-A: Create `data/products.ts` with at least 20 product objects
+- [x] TASK-011-A: Create `data/products.ts` with at least 20 product objects
   - Include: id, name, price, images[], description, material, threadCount, sizes[], colors[], rating, reviewCount, specifications, care instructions
-- [ ] TASK-011-B: Create `data/collections.ts` (Linen Luxe, Cloud Cotton, Seasonal Favorites)
-- [ ] TASK-011-C: Create `data/categories.ts` (Sheets, Duvets, Pillows, Toppers, Blankets, Curtains)
-- [ ] TASK-011-D: Create `data/reviews.ts` with sample customer reviews
-- [ ] TASK-011-E: Create `data/materials.ts` (Egyptian Cotton, Linen, Bamboo info)
-- [ ] TASK-011-F: Create TypeScript interfaces/types for all data structures
-- [ ] TASK-011-G: Add realistic product images (use Unsplash URLs)
+- [x] TASK-011-B: Create `data/collections.ts` (Linen Luxe, Cloud Cotton, Seasonal Favorites)
+- [x] TASK-011-C: Create `data/categories.ts` (Sheets, Duvets, Pillows, Toppers, Blankets, Curtains)
+- [x] TASK-011-D: Create `data/reviews.ts` with sample customer reviews
+- [x] TASK-011-E: Create `data/materials.ts` (Egyptian Cotton, Linen, Bamboo info)
+- [x] TASK-011-F: Create TypeScript interfaces/types for all data structures
+- [x] TASK-011-G: Add realistic product images (use Unsplash URLs)
+- [x] **TASK-011-H: Fix broken product images** (Maintenance - Nov 8, 2025)
+
+**Image Fixes (Nov 8, 2025):**
+- ✅ pillow-002 (Down Alternative Soft Pillow) - Replaced broken image with working pillow photo
+- ✅ duvet-002 (Lightweight Linen Duvet Cover) - Replaced with second image from gallery
+- ✅ pillow-001 (Memory Foam Contour Pillow) - Replaced with working pillow image
+- ✅ sheet-005 (Jersey Knit Sheet Set) - Replaced with second image from gallery
 
 **Acceptance Criteria:**
-- All mock data files are properly typed
-- Data includes realistic content (no lorem ipsum)
+- ✅ All mock data files are properly typed
+- ✅ Data includes realistic content (no lorem ipsum)
+- ✅ All product images load correctly
 - Images are high-quality and relevant
 
 ---
@@ -876,22 +895,28 @@ Create sticky order summary with pricing breakdown and checkout button.
 ### TASK-036: Trust Badges & Checkout Button
 **Priority:** High
 **Story Points:** 2
+**Status:** ✅ COMPLETED + REFINED
 
 **Description:**
 Add trust signals and checkout button to order summary.
 
 **Subtasks:**
-- [ ] TASK-036-A: Add trust badge icons to OrderSummary
-  - Free Shipping over $100
-  - 100-Night Trial
-  - Easy Returns
-  - Secure Checkout
-- [ ] TASK-036-B: Create "Proceed to Checkout" button (large, terracotta)
-- [ ] TASK-036-C: Add lock icon to checkout button
-- [ ] TASK-036-D: Add payment method icons below
+- [x] TASK-036-A: Add trust badge icons to OrderSummary
+  - Free Shipping over $100 ✅
+  - ~~100-Night Trial~~ → 14-Day Sleep Trial ✅ (Updated Nov 8, 2025)
+  - ~~Easy Returns (100 days)~~ → Easy Returns within 14 days ✅ (Updated Nov 8, 2025)
+  - Secure Checkout ✅
+- [x] TASK-036-B: Create "Proceed to Checkout" button (large, terracotta)
+- [x] TASK-036-C: Add lock icon to checkout button
+- [x] TASK-036-D: Add payment method icons below
   - Visa, Mastercard, Amex, PayPal, Apple Pay
-- [ ] TASK-036-E: Style badges with icons and minimal text
-- [ ] TASK-036-F: Add click handler for checkout (mock navigation)
+- [x] TASK-036-E: Style badges with icons and minimal text
+- [x] TASK-036-F: Add click handler for checkout (mock navigation)
+
+**Refinement Notes (Nov 8, 2025):**
+- Updated trial period: 100-Night → 14-Day (more realistic)
+- Updated return policy: 100 days → 14 days (industry standard)
+- Maintains trust while being more achievable for UX demonstration
 
 **Acceptance Criteria:**
 - Trust badges are visible and clear
@@ -903,23 +928,31 @@ Add trust signals and checkout button to order summary.
 ### TASK-037: Cart Recommendations
 **Priority:** Medium
 **Story Points:** 3
+**Status:** ✅ COMPLETED + REFINED
 
 **Description:**
 Create product recommendations section below cart.
 
 **Subtasks:**
-- [ ] TASK-037-A: Create CartRecommendations component
-- [ ] TASK-037-B: Add section title "You Might Also Need"
-- [ ] TASK-037-C: Display cross-sell products
-  - Pillow protectors
-  - Duvet clips
-  - Mattress protector
-  - Fabric refresher spray
-- [ ] TASK-037-D: Create small product cards with images
-- [ ] TASK-037-E: Add quick "Add to Cart" button on each
-- [ ] TASK-037-F: Use grid layout (4 columns)
-- [ ] TASK-037-G: Pull recommendations from mock data
-- [ ] TASK-037-H: Style consistently with site design
+- [x] TASK-037-A: Create CartRecommendations component
+- [x] TASK-037-B: Add section title "You Might Also Need"
+- [x] TASK-037-C: Display upsell products (Complete the Set style)
+  - ~~Pillow protectors~~ → All-Season Down Alternative Duvet
+  - ~~Duvet clips~~ → Down Alternative Soft Pillow
+  - ~~Mattress protector~~ → Chunky Knit Throw Blanket
+  - ~~Fabric refresher spray~~ → Gel-Infused Memory Foam Topper
+- [x] TASK-037-D: Create product cards with images
+- [x] TASK-037-E: Add quick "Add to Cart" button on each
+- [x] TASK-037-F: Use grid layout (4 columns)
+- [x] TASK-037-G: Pull recommendations from mock data
+- [x] TASK-037-H: Style consistently with site design
+- [x] **TASK-037-I: Update trial/return policy to 14 days** (Refinement - Nov 8, 2025)
+
+**Refinement Notes (Nov 8, 2025):**
+- Changed from small accessories to substantial bedding products
+- Products now match "Complete the Set" concept for better upselling
+- Static product IDs: duvet-001, pillow-002, blanket-001, topper-001
+- Updated benefits banner: 100 Nights/Days → 14 Days (more realistic)
 
 **Acceptance Criteria:**
 - Recommendations display in grid

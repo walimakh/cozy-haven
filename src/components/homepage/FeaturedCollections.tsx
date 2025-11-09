@@ -134,8 +134,8 @@ export default function FeaturedCollections() {
                 >
                   {collection.shortDescription}
                 </p>
-                <Button variant="ghost" size="medium">
-                  Shop Collection
+                <Button variant="primary" size="medium">
+                  Explore Collection
                 </Button>
               </div>
             </div>
