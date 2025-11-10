@@ -135,7 +135,8 @@ export default function FeaturedCollections() {
                   {collection.shortDescription}
                 </p>
                 <Button variant="primary" size="medium">
-                  Explore Collection
+                  <span className="hidden sm:inline">Explore Collection</span>
+                  <span className="sm:hidden">Explore</span>
                 </Button>
               </div>
             </div>

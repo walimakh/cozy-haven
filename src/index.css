@@ -106,4 +106,146 @@
   .badge-bestseller {
     @apply bg-warm-charcoal text-white;
   }
+
+  /* Mobile Utility Classes */
+
+  /* Mobile Container - Full width with side padding */
+  .mobile-container {
+    @apply w-full px-4;  /* 16px side padding on mobile */
+  }
+
+  /* Mobile Touch Targets - Ensure minimum touch target size */
+  .touch-target {
+    @apply min-h-touch min-w-touch;  /* 44px minimum (Apple HIG) */
+  }
+
+  .touch-target-optimal {
+    @apply min-h-touch-optimal min-w-touch-optimal;  /* 48px (Material Design) */
+  }
+
+  /* Mobile Typography Helpers */
+  .text-mobile-h1 {
+    @apply text-h1-mobile;
+  }
+
+  .text-mobile-h2 {
+    @apply text-h2-mobile;
+  }
+
+  .text-mobile-h3 {
+    @apply text-h3-mobile;
+  }
+
+  .text-mobile-h4 {
+    @apply text-h4-mobile;
+  }
+
+  .text-mobile-body {
+    @apply text-body-mobile;
+  }
+
+  /* Mobile Button Override - Full width on mobile */
+  .btn-mobile-full {
+    @apply w-full min-h-touch-optimal;  /* Full width + 48px height for easy tapping */
+  }
+
+  /* Mobile Card - Reduced shadow and padding for mobile */
+  .card-mobile {
+    @apply bg-white rounded-card shadow-sm p-4;
+  }
+}
+
+/* Mobile-Specific Utility Layer */
+@layer utilities {
+  /* Visibility Utilities */
+  .hide-on-mobile {
+    @apply block md:block;  /* Hidden by default, show on md+ */
+  }
+
+  @media (max-width: 767px) {
+    .hide-on-mobile {
+      @apply hidden;
+    }
+  }
+
+  .show-on-mobile {
+    @apply block md:hidden;  /* Show on mobile, hide on md+ */
+  }
+
+  .hide-on-desktop {
+    @apply hidden md:hidden;  /* Hidden on desktop */
+  }
+
+  @media (max-width: 767px) {
+    .hide-on-desktop {
+      @apply block;
+    }
+  }
+
+  .show-on-desktop {
+    @apply hidden md:block;  /* Hide on mobile, show on md+ */
+  }
+
+  /* Mobile Scrolling - Horizontal scroll for carousels */
+  .mobile-scroll {
+    @apply overflow-x-auto snap-x snap-mandatory;
+    -webkit-overflow-scrolling: touch;  /* Smooth scrolling on iOS */
+    scrollbar-width: none;  /* Hide scrollbar on Firefox */
+  }
+
+  .mobile-scroll::-webkit-scrollbar {
+    display: none;  /* Hide scrollbar on Chrome/Safari */
+  }
+
+  .mobile-scroll-item {
+    @apply snap-start;
+  }
+
+  /* Mobile Spacing - Reduced padding for mobile */
+  .mobile-spacing {
+    @apply py-8 md:py-16;  /* 32px mobile, 64px desktop */
+  }
+
+  /* Mobile Grid - Responsive grid layouts */
+  .mobile-grid-1 {
+    @apply grid grid-cols-1 gap-4;
+  }
+
+  .mobile-grid-2 {
+    @apply grid grid-cols-2 gap-3 md:gap-6;
+  }
+
+  /* Mobile Stack - Force single column on mobile */
+  .mobile-stack {
+    @apply flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-6;
+  }
+
+  /* Safe Area Padding - For iOS notch/home indicator */
+  .mobile-safe-area-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .mobile-safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Disable hover effects on touch devices */
+  @media (hover: none) {
+    .hover\:shadow-card-hover:hover {
+      box-shadow: 0 2px 8px rgba(61, 57, 53, 0.06);  /* Keep default shadow */
+    }
+
+    .hover\:-translate-y-1:hover {
+      transform: translateY(0);  /* No lift on touch devices */
+    }
+  }
+
+  /* Active/Touch States for Mobile */
+  .touch-feedback {
+    @apply transition-transform duration-100 active:scale-95;
+  }
+
+  .touch-feedback-subtle {
+    @apply transition-opacity duration-100 active:opacity-70;
+  }
 }
