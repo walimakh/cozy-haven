@@ -79,7 +79,7 @@ export default function AddToCartSection({
           size="large"
           onClick={handleAddToCart}
           disabled={!inStock}
-          className="flex-1"
+          className="flex-1 min-h-[48px]"
         >
           <ShoppingCart className="h-5 w-5" />
           {inStock ? 'Add to Cart' : 'Out of Stock'}
@@ -90,7 +90,7 @@ export default function AddToCartSection({
           variant="secondary"
           size="large"
           onClick={onAddToWishlist}
-          className="px-4"
+          className="px-4 min-h-[48px]"
           aria-label="Add to wishlist"
         >
           <Heart className="h-5 w-5" />

@@ -24,7 +24,7 @@ export default function ColorSelector({
       </label>
 
       {/* Color Swatches */}
-      <div className="flex items-center gap-3 flex-wrap">
+      <div className="flex items-center gap-4 md:gap-3 flex-wrap">
         {colors.map((color) => {
           const isSelected = selectedColor === color.name;
           return (
@@ -33,8 +33,8 @@ export default function ColorSelector({
               type="button"
               onClick={() => onColorChange(color.name)}
               className={`
-                relative h-12 w-12 rounded-full
-                border-2 transition-all duration-200
+                relative h-14 w-14 md:h-12 md:w-12 rounded-full
+                border-2 transition-all duration-200 active:scale-95
                 ${
                   isSelected
                     ? 'border-terracotta scale-110 shadow-md'

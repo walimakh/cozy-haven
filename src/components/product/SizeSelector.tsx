@@ -33,7 +33,7 @@ export default function SizeSelector({
       </div>
 
       {/* Size Options */}
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
         {sizes.map((size) => {
           const isSelected = selectedSize === size;
           return (
@@ -42,8 +42,8 @@ export default function SizeSelector({
               type="button"
               onClick={() => onSizeChange(size)}
               className={`
-                px-4 py-3 rounded-lg text-[14px] font-medium
-                border-2 transition-all duration-200
+                px-4 py-4 md:py-3 rounded-lg text-[14px] font-medium min-h-[48px]
+                border-2 transition-all duration-200 active:scale-95
                 ${
                   isSelected
                     ? 'border-terracotta bg-terracotta/5 text-terracotta'
