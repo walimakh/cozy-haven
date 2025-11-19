@@ -37,17 +37,17 @@ export const OrderSummary: FC<OrderSummaryProps> = ({ subtotal, itemCount }) => 
   };
 
   return (
-    <div className="bg-white rounded-xl border border-cream p-6 sticky top-24 h-fit">
+    <div className="bg-white rounded-xl border border-cream p-4 md:p-6 md:sticky md:top-24 h-fit">
       {/* Title */}
-      <h2 className="text-2xl font-bold text-charcoal mb-6">Order Summary</h2>
+      <h2 className="text-xl md:text-2xl font-bold text-charcoal mb-4 md:mb-6">Order Summary</h2>
 
       {/* Item Count */}
-      <div className="text-sm text-charcoal/60 mb-4">
+      <div className="text-sm text-charcoal/60 mb-3 md:mb-4">
         {itemCount} {itemCount === 1 ? 'item' : 'items'} in cart
       </div>
 
       {/* Pricing Breakdown */}
-      <div className="space-y-3 mb-6 pb-6 border-b border-cream">
+      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 pb-4 md:pb-6 border-b border-cream">
         {/* Subtotal */}
         <div className="flex justify-between text-charcoal">
           <span>Subtotal</span>
@@ -90,14 +90,14 @@ export const OrderSummary: FC<OrderSummaryProps> = ({ subtotal, itemCount }) => 
       </div>
 
       {/* Total */}
-      <div className="flex justify-between items-baseline mb-6 pb-6 border-b border-cream">
-        <span className="text-lg font-semibold text-charcoal">Total</span>
-        <span className="text-3xl font-bold text-charcoal">${total.toFixed(2)}</span>
+      <div className="flex justify-between items-baseline mb-4 md:mb-6 pb-4 md:pb-6 border-b border-cream">
+        <span className="text-base md:text-lg font-semibold text-charcoal">Total</span>
+        <span className="text-2xl md:text-3xl font-bold text-charcoal">${total.toFixed(2)}</span>
       </div>
 
       {/* Promo Code */}
       {!promoApplied && (
-        <div className="mb-6">
+        <div className="mb-4 md:mb-6">
           <label htmlFor="promo-code" className="block text-sm font-medium text-charcoal mb-2">
             Promo Code
           </label>
@@ -108,9 +108,9 @@ export const OrderSummary: FC<OrderSummaryProps> = ({ subtotal, itemCount }) => 
               value={promoCode}
               onChange={(e) => setPromoCode(e.target.value)}
               placeholder="Enter code"
-              className="flex-1 px-4 py-2 border border-charcoal/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-terracotta focus:border-transparent"
+              className="flex-1 px-3 md:px-4 py-3 md:py-2 border border-charcoal/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-terracotta focus:border-transparent min-h-[48px]"
             />
-            <Button variant="secondary" size="medium" onClick={handleApplyPromo} className="shrink-0">
+            <Button variant="secondary" size="medium" onClick={handleApplyPromo} className="shrink-0 min-h-[48px]">
               Apply
             </Button>
           </div>
@@ -119,34 +119,34 @@ export const OrderSummary: FC<OrderSummaryProps> = ({ subtotal, itemCount }) => 
       )}
 
       {/* Checkout Button */}
-      <Button variant="primary" size="large" className="w-full mb-4" icon={<Lock className="w-5 h-5" />} iconPosition="left">
+      <Button variant="primary" size="large" className="w-full mb-4 min-h-[48px]" icon={<Lock className="w-5 h-5" />} iconPosition="left">
         Proceed to Checkout
       </Button>
 
       {/* Trust Badges */}
-      <div className="space-y-3 pt-6 border-t border-cream">
-        <div className="flex items-center gap-3 text-sm text-charcoal/70">
-          <Truck className="w-5 h-5 text-sage" />
-          <span>Free shipping over $100</span>
+      <div className="grid grid-cols-2 md:grid-cols-1 gap-2 md:space-y-3 pt-4 md:pt-6 border-t border-cream">
+        <div className="flex items-center gap-2 md:gap-3 text-xs md:text-sm text-charcoal/70">
+          <Truck className="w-4 h-4 md:w-5 md:h-5 text-sage flex-shrink-0" />
+          <span>Free shipping $100+</span>
         </div>
-        <div className="flex items-center gap-3 text-sm text-charcoal/70">
-          <ShieldCheck className="w-5 h-5 text-sage" />
-          <span>14-Day Sleep Trial</span>
+        <div className="flex items-center gap-2 md:gap-3 text-xs md:text-sm text-charcoal/70">
+          <ShieldCheck className="w-4 h-4 md:w-5 md:h-5 text-sage flex-shrink-0" />
+          <span>14-Day Trial</span>
         </div>
-        <div className="flex items-center gap-3 text-sm text-charcoal/70">
-          <Package className="w-5 h-5 text-sage" />
-          <span>Easy Returns within 14 days</span>
+        <div className="flex items-center gap-2 md:gap-3 text-xs md:text-sm text-charcoal/70">
+          <Package className="w-4 h-4 md:w-5 md:h-5 text-sage flex-shrink-0" />
+          <span>Easy Returns</span>
         </div>
-        <div className="flex items-center gap-3 text-sm text-charcoal/70">
-          <Lock className="w-5 h-5 text-sage" />
+        <div className="flex items-center gap-2 md:gap-3 text-xs md:text-sm text-charcoal/70">
+          <Lock className="w-4 h-4 md:w-5 md:h-5 text-sage flex-shrink-0" />
           <span>Secure Checkout</span>
         </div>
       </div>
 
       {/* Payment Methods */}
-      <div className="pt-6 border-t border-cream mt-6">
-        <p className="text-xs text-charcoal/50 mb-3 text-center">We accept</p>
-        <div className="flex justify-center gap-3 items-center">
+      <div className="pt-4 md:pt-6 border-t border-cream mt-4 md:mt-6">
+        <p className="text-xs text-charcoal/50 mb-2 md:mb-3 text-center">We accept</p>
+        <div className="flex justify-center gap-2 md:gap-3 items-center">
           <img src="https://cdn-icons-png.flaticon.com/512/349/349221.png" alt="Visa" className="h-6 opacity-60" />
           <img
             src="https://cdn-icons-png.flaticon.com/512/349/349228.png"

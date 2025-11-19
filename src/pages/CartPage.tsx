@@ -41,26 +41,26 @@ export const CartPage: FC = () => {
 
   return (
     <Layout cartItemCount={itemCount}>
-      <div className="max-w-[1200px] mx-auto px-8 py-12">
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8 py-6 md:py-12">
         {/* Breadcrumb / Back Link */}
-        <Link to="/" className="inline-flex items-center text-charcoal/70 hover:text-terracotta transition-colors mb-8">
+        <Link to="/" className="inline-flex items-center text-charcoal/70 hover:text-terracotta transition-colors mb-6 md:mb-8">
           <ChevronLeft className="w-5 h-5 mr-1" />
           Continue Shopping
         </Link>
 
         {/* Page Title */}
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-charcoal mb-2">Shopping Cart</h1>
-          <p className="text-charcoal/60">
+        <div className="mb-6 md:mb-8">
+          <h1 className="text-2xl md:text-4xl font-bold text-charcoal mb-2">Shopping Cart</h1>
+          <p className="text-sm md:text-base text-charcoal/60">
             {itemCount} {itemCount === 1 ? 'item' : 'items'} in your cart
           </p>
         </div>
 
-        {/* Two-Column Layout */}
-        <div className="grid grid-cols-3 gap-8 mb-16">
-          {/* Left Column: Cart Items (2/3 width) */}
-          <div className="col-span-2">
-            <div className="bg-white rounded-xl border border-cream p-6">
+        {/* Mobile: Single Column, Desktop: Two-Column Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-16">
+          {/* Cart Items */}
+          <div className="md:col-span-2">
+            <div className="bg-white rounded-xl border border-cream p-4 md:p-6">
               {items.map((item) => (
                 <CartItem
                   key={`${item.product.id}-${item.selectedSize}-${item.selectedColor}`}
@@ -71,16 +71,16 @@ export const CartPage: FC = () => {
               ))}
             </div>
 
-            {/* Continue Shopping Link */}
-            <div className="mt-6 text-center">
+            {/* Continue Shopping Link - hidden on mobile, shown on desktop */}
+            <div className="hidden md:block mt-6 text-center">
               <Link to="/" className="text-terracotta hover:text-charcoal transition-colors font-medium">
                 ← Continue Shopping
               </Link>
             </div>
           </div>
 
-          {/* Right Column: Order Summary (1/3 width) */}
-          <div className="col-span-1">
+          {/* Order Summary */}
+          <div className="md:col-span-1">
             <OrderSummary subtotal={subtotal} itemCount={itemCount} />
           </div>
         </div>
