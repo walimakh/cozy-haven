@@ -201,6 +201,16 @@
     @apply snap-start;
   }
 
+  /* Scrollbar Hide - Utility to hide scrollbars */
+  .scrollbar-hide {
+    -webkit-overflow-scrolling: touch;  /* Smooth scrolling on iOS */
+    scrollbar-width: none;  /* Hide scrollbar on Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Hide scrollbar on Chrome/Safari */
+  }
+
   /* Mobile Spacing - Reduced padding for mobile */
   .mobile-spacing {
     @apply py-8 md:py-16;  /* 32px mobile, 64px desktop */
